@@ -1,6 +1,6 @@
 [book]
 authors = ["zhengzhimou"]
 language = "en"
-multilingual = false
+multilingual = true
 src = "src"
 title = "my-book"
