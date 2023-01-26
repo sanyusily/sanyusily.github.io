@@ -1,38 +1,18 @@
-name: PublishMySite
-
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
+name: publish site
+on: # 在什么时候触发工作流
+  push: # 在从本地main分支被push到GitHub仓库时
     branches:
       - main
-  pull_request:
+  pull_request: # 在main分支合并别人提的pr时
     branches:
       - main
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs: # 工作流的具体内容
+  deploy:
+    runs-on: ubuntu-latest # 创建一个新的云端虚拟机 使用最新Ubuntu系统
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Build markdown files to a static site.
-      - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
+      - uses: actions/checkout@v2 # 先checkout到main分支
+      - uses: actions/setup-python@v2 # 再安装Python3和相关环境
         with:
-          mdbook-version: "latest"
-      - run: mdbook build . --dest-dir ./book # --dest-dir is relative to <dir>
-
-      # Publish the static site to gh-pages branch.
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
-          publish_dir: ./book
-          publish_branch: gh-pages
+          python-version: 3.x
+      - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
+      - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
