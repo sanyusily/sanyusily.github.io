@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "src/**.md"
+      - "book.toml"
   pull_request:
     branches:
       - main
@@ -35,4 +38,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN}}
           publish_dir: ./book
+          EXTERNAL_REPOSITORY: sanyusily/sanyusily.github.io
           publish_branch: gh-pages
