@@ -1,6 +1,0 @@
-[book]
-authors = ["zhengzhimou"]
-language = "en"
-multilingual = true
-src = "src"
-title = "my-book"
