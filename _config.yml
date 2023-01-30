@@ -19,15 +19,37 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : # does not include hostname
-title   : 郑智谋的HomePage小站
+baseurl : "" # does not include hostname
+title   : 郑智谋的的技术云屋
 description: > # this means to ignore newlines until "Language & timezone"
   郑智谋的HomePage小站
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: "zh-Hans" # the language of your site, default as "en"
+      #en      : &EN       Archive
+      #en-GB   : *EN
+      #en-US   : *EN
+      #en-CA   : *EN
+      #en-AU   : *EN
+      #zh-Hans : &ZH_HANS  归档
+      #zh      : *ZH_HANS
+      #zh-CN   : *ZH_HANS
+      #zh-SG   : *ZH_HANS
+      #zh-Hant : &ZH_HANT  歸檔
+      #zh-TW   : *ZH_HANT
+      #zh-HK   : *ZH_HANT
+      #ko      : &KO       아카이브
+      #ko-KR   : *KO
+      #fr      : &FR       Archives
+      #fr-BE   : *FR
+      #fr-CA   : *FR
+      #fr-CH   : *FR
+      #fr-FR   : *FR
+      #fr-LU   : *FR
+      #tr      : &TR
+
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
