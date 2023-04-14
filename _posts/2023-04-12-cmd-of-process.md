@@ -3,10 +3,8 @@ layout: article
 title: 'Ubuntu20.04编译Android10系统源码'
 tags: read
 ---
-Ubuntu20.04编译Android10系统源码
-# Ubuntu20.04编译Android10系统源码
 
-
+# aosp 13 编译Android10系统源码
 ## 1. 本地解压方式
 下载链接地址：https://pan.baidu.com/s/1Jwsrb-zwrQO-HEHo5eo9Jg 提取码:uu1j
 百度云下载相关的源码包，进行本地解压,下载我提供的百度云链接 android-8.1.0_r1
