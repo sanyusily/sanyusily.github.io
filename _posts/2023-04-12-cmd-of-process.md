@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 'Ubuntu20.04编译Android10系统源码'
-tags: read
+tags: Linux,Android,Framework
 ---
 
 # aosp 13 编译Android10系统源码
