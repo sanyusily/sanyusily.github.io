@@ -1,6 +1,6 @@
 ---
 layout: article
-title: '压缩 Jekyll 中的 HTML 和 CSS 代码'
+title: '压缩 Jekyll 中的 HTML 和 CSS 1代码'
 tags: code
 ---
 

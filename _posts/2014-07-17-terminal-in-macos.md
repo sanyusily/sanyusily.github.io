@@ -9,6 +9,7 @@ tags: code
 * iTerm2
 * Solarized
 * oh-my-zsh
+* issues
 
 ## 一、使用 iTerm2 代替默认终端
 
@@ -76,4 +77,19 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 | <kbd>Ctrl</kbd> + <kbd>D</kbd>  | 关闭当前的终端会话                              |
 
 
-（本文写于杭州阿里实习期间）
+## 五、git相关问题
+
+### 1、git init错误异常提示如下
+
+
+fatal: detected dubious ownership in repository at '/home/sanyusily/Android/android_h5630/frameworks'
+To add an exception for this directory, call:
+
+git config --global --add safe.directory /home/sanyusily/Android/android_h5630/frameworks
+
+解决方法：只需添加一段代码就可以
+~~~sh
+git config --global --add safe.directory "*";
+~~~
+
+（本文写于萝卜头期间）
