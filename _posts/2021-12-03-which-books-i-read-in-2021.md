@@ -1,10 +1,10 @@
 ---
 layout: article
-title: '2021 年我读了哪些书'
-tags: read
+title: 'Ubuntu编译Android源码（AOSP'
+tags: Linux,Android,AOSP
 ---
 
-#  Ubentu编译Android源码（AOSP）
+#  Ubuntu编译Android源码（AOSP）
 
 前言：
 
