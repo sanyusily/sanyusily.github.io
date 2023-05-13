@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 'Ubuntu编译Android源码（AOSP'
-tags: Linux,Android,AOSP
+tags: AOSP
 ---
 
 #  Ubuntu编译Android源码（AOSP）
