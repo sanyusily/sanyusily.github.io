@@ -173,7 +173,7 @@ sudo n ls
 
 sudo n 18.21.1
 
-  ~~~
+~~~
 
 
 
@@ -182,7 +182,7 @@ sudo n 18.21.1
 || appProject?.ext?.react?.enableHermes?.toBoolean()
 
 
-  ~~~
+~~~
 
 npm install --legacy-peer-deps 解决安装问题
 
@@ -208,10 +208,8 @@ npm install redux -dev // 开发环境的依赖
 npm uninstall redux
 
   
-  
-  ~~~
-
-  ~~~
+~~~
+~~~
 
 $ cd android
 
