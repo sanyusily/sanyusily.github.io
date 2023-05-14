@@ -62,7 +62,7 @@ key: page-about
 </div>
 
 
-![Image](/assets/images/about/about_connect.jpeg "Image@128x128"){:width="128px" height="128px" .center}
+![Image](/assets/images/about/about_connect.jpeg "Image@200x273"){:width="200px" height="273px" .center}
 ## 请我喝一杯咖啡 {#buymeacoffee}
 
 此举将激励作者写出更好的文章。
