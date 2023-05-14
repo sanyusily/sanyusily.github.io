@@ -61,6 +61,8 @@ key: page-about
 身份声明：<span style="font-weight: bold; font-family: 'Source Code Pro', 'Andale Mono', Menlo, Consolas, monospace">AEF8 AF62 E961 00B5 A9F3  1A07 5736 AE9A 8AB7 83F6</span> 为本人所持 PGP 公钥指纹
 </div>
 
+
+![Image](/assets/images/about/about_connect.jpeg "Image@128x128"){:width="128px" height="128px" .center}
 ## 请我喝一杯咖啡 {#buymeacoffee}
 
 此举将激励作者写出更好的文章。
