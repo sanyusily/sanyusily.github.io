@@ -1,9 +1,9 @@
 # [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
-## 这是 技术云屋 的源码，使用 Jekyll 来生成静态网页。
+## Brief preface
 
 ~~~text
-如果您喜欢这个技术云屋主题，可以自由的使用它。请完成如下操作：
+这是 技术云屋 的源码，如果您喜欢这个技术云屋主题，可以自由的使用它。请完成如下操作：
 
 保留源代码中的所有版权信息
 删除 _posts 中的所有 Markdown 文件
