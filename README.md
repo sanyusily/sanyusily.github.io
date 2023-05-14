@@ -1,5 +1,19 @@
 # [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
+## 这是 技术云屋 的源码，使用 Jekyll 来生成静态网页。
+
+~~~text
+如果您喜欢这个技术云屋主题，可以自由的使用它。请完成如下操作：
+
+保留源代码中的所有版权信息
+删除 _posts 中的所有 Markdown 文件
+修改 _config.yml 中的 Google Analytics 统计代码、作者帐号、邮箱等信息
+修改 _data 中的标签信息，以及 about.md 中的作者简介
+将【技术云屋】（网址：https://sanyusily.github.io/） 加入到您的友情链接中
+
+如有其他问题，欢迎联系 286471875@qq.com
+~~~
+
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
