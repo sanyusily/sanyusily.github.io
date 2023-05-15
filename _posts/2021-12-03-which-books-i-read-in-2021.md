@@ -1,12 +1,10 @@
 ---
 layout: article
-title: 'Ubuntu编译Android源码（AOSP'
+title: 'Ubuntu编译Android源码（AOSP）'
 tags: AOSP
 ---
 
-#  Ubuntu编译Android源码（AOSP）
-
-前言：
+#  前言：
 
 一直想要编译一下Android 源码，之前去google 看，下载要下载repo。
 当时很懵逼，repo 是个什么？（repo 是一个python 脚本，因为Android 源码git 仓库太多，帮助管理git 仓库的，你不需要知道里面什么实现。会用就行。）
