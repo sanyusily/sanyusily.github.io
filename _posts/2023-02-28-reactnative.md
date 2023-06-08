@@ -1,6 +1,6 @@
 ---
 layout: article
-title: '实现和探究ReactNative的分包功能，'
+title: '实现和探究ReactNative的分包功能'
 tags: react
 ---
 
