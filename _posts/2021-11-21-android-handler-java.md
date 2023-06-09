@@ -4,8 +4,6 @@ title: 'Android 源码分析之Handler'
 tags: Android handler Java
 ---
 
-# Android P源码分析之Handler(JAVA) 
-
 ## 简介
 
   **Handler是线程间通讯的载体,它通过异步操作将Message事务入队到目标线程的消息队列中,最终目标线程通过出队列的方式处理传递过来的Message事务,从而实现线程间通讯**  

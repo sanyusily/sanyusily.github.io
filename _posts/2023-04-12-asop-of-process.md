@@ -3,8 +3,34 @@ layout: article
 title: 'Ubuntu20.04编译Android10系统源码'
 tags: Framework
 ---
-
 # aosp 13 编译Android10系统源码
+
+## 0初始 搭建环境
+
+1默认官方的源在国内下载很慢,推荐换成[中科大](http://mirrors.ustc.edu.cn/help/ubuntu.html)的源.
+2源更换完成后,下载所需的软件包:
+```
+sudo apt-get install git-core repo libc6-dev-i386 unzip
+```
+3配置linux环境:
+
+```
+export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
+mkdir WORKING_DIRECTORY
+cd WORKING_DIRECTORY
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+## 下载AOSP源码
+由于Android P的Treble特性,使用GSI镜像可以刷入VTS认证的设备中(如果你不确认你手上的设备是否支持,推荐购买Google Pixel系列手机),因此我们选用GSI分支.
+```
+repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b pie-gsi
+repo sync -cq -j4
+```
+最后等待下载完成.
+
+
 ## 1. 本地解压方式
 下载链接地址：https://pan.baidu.com/s/1Jwsrb-zwrQO-HEHo5eo9Jg 提取码:uu1j
 百度云下载相关的源码包，进行本地解压,下载我提供的百度云链接 android-8.1.0_r1
