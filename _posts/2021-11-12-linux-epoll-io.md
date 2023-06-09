@@ -21,9 +21,9 @@ epoll是linux为监听多路IO的状态所实现的方法.
 ![epoll_IO.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a813622fc5444750a787f88a118b0147~tplv-k3u1fbpfcp-watermark.image?)
 如上图可以看出,**epoll能在同时监听多路IO状态的基础上又不需要额外的线程开销**
 
-## [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#函数原型 "函数原型")函数原型
+## 函数原型
 
-### [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#1-创建epoll文件描述符 "1. 创建epoll文件描述符")1. 创建epoll文件描述符
+### 1. 创建epoll文件描述符
 
 **SYNOPSIS**
 
@@ -37,7 +37,7 @@ int epoll_create(int size); /* 从Linux内核版本2.6.8起,形参size被忽略,
   On error, -1 is returned, and errno is set to indicate the error.
 
 
-### [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#2-epoll监听文件描述符 "2. epoll监听文件描述符")2. epoll监听文件描述符
+### 2. epoll监听文件描述符
 
 **SYNOPSIS**
 ```
@@ -50,7 +50,7 @@ int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);
   When successful, epoll_ctl() returns zero.  
   When an error occurs, epoll_ctl() returns -1 and errno is set appropriately.
 
-#### [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#2-1-参数说明 "2.1 参数说明")2.1 参数说明
+#### 2.1 参数说明
 
 | OP                | 说明              |
 | ----------------- | --------------- |
@@ -120,7 +120,7 @@ static int ep_send_events_proc(struct eventpoll *ep, struct list_head *head,void
 
   **EPOLLET边缘触发: 直接休眠等待下次socket fd的EPOLLIN事件触发(线程A的write动作)**
 
-### [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#3-epoll等待监听的事件触发 "3. epoll等待监听的事件触发")3. epoll等待监听的事件触发
+### 3. epoll等待监听的事件触发
 
 **SYNOPSIS**
 
@@ -138,7 +138,7 @@ int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);
 | **maxevents** | 最大触发事件的个数(<=events容量)          |
 | **events**    | 事件触发时,该数组会被填充                  |
 
-## [](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/#例子 "例子")例子
+## 例子
 
 ```
 /*本例子的流程为: 

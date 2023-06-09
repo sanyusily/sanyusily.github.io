@@ -13,7 +13,7 @@ tags: Looper Android AOSP
 
 ## 简介
 
-  在[Android P源码分析之Handler(JAVA)篇](https://zhenkunhuang.github.io/2019/05/05/android-handler-java/ "Android P源码分析之Handler(JAVA)篇")中,我们分析了Java层的消息循环处理流程,其中Looper扮演着不断从消息队列中取出消息进行分发处理的重要角色.而在Native层中,也存在着相同作用的Looper.
+  在[Android P源码分析之Handler(JAVA)篇](https://sanyusily.github.io/2021/11/21/android-handler-java.html "Android P源码分析之Handler(JAVA)篇")中,我们分析了Java层的消息循环处理流程,其中Looper扮演着不断从消息队列中取出消息进行分发处理的重要角色.而在Native层中,也存在着相同作用的Looper.
 
 ## 示例
 
@@ -100,13 +100,13 @@ tid : 8235, receive event : Hello World    /* 消费者线程处理Fd事务 */
 
 **接下来我们将从消费者线程和生产者线程角度分析示例流程**
 
-## [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#源码分析 "源码分析")源码分析
+## 源码分析
 
-### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#消费者线程 "消费者线程")消费者线程
+### 消费者线程
 
   **我们首先分析Looper(Native)的初始化函数prepare**
 
-#### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#1-1-prepare "1.1 prepare")1.1 prepare
+#### 1.1 prepare
 
 ```
 sp<Looper> Looper::prepare(int opts) {
@@ -288,7 +288,7 @@ Done: ;
 
 **我们首先分析下发送消息事务sendMessage**
 
-#### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#2-1-sendMessage "2.1 sendMessage")2.1 sendMessage
+#### 2.1 sendMessage
 ```
 void Looper::sendMessage(const sp<MessageHandler>& handler, const Message& message) {
     nsecs_t now = systemTime(SYSTEM_TIME_MONOTONIC);
@@ -343,7 +343,7 @@ void Looper::wake() {
 
 **接下来分析添加Fd事务请求addfd**
 
-#### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#2-4-addfd "2.4 addfd")2.4 addfd
+#### 2.4 addfd
 ```
 int Looper::addFd(int fd, int ident, int events, const sp<LooperCallback>& callback, void* data) {
 ......
@@ -390,16 +390,16 @@ int Looper::addFd(int fd, int ident, int events, const sp<LooperCallback>& callb
 
 # 二、MessageQueue
 
-## [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#简介-1 "简介")简介
+## 简介
 
-  在[Android P源码分析之Handler(JAVA)篇](https://zhenkunhuang.github.io/2019/05/05/android-handler-java/ "Android P源码分析之Handler(JAVA)篇")中,我们分析了MessageQueue类的取出消息next流程以及入队消息enqueueMessage流程  
+  在[Android P源码分析之Handler(JAVA)篇](https://sanyusily.github.io/2021/11/21/android-handler-java.html "Android P源码分析之Handler(JAVA)篇")中,我们分析了MessageQueue类的取出消息next流程以及入队消息enqueueMessage流程  
   以上两个流程中,都有调用Native方法(nativePollOnce和nativeWake),接下来我们将对这两个Native方法进行分析
 
-## [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#源码分析-1 "源码分析")源码分析
+## 源码分析
 
   **我们首先分析MessageQueue的构造函数**
 
-### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#3-1-MessageQueue构造函数 "3.1 MessageQueue构造函数")3.1 MessageQueue构造函数
+### 3.1 MessageQueue构造函数
 ```
 MessageQueue(boolean quitAllowed) {
     mQuitAllowed = quitAllowed;
@@ -443,7 +443,7 @@ NativeMessageQueue::NativeMessageQueue() {
 
 **接下来分析MessageQueue取出消息next函数中使用的nativePollOnce方法**
 
-### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#3-4-next "3.4 next")3.4 next
+### 3.4 next
 
 ```
 Message next() {
@@ -479,7 +479,7 @@ static void android_os_MessageQueue_nativePollOnce(JNIEnv* env, jobject obj,
 
 **最后分析入队消息enqueueMessage函数中使用的nativeWake方法**
 
-### [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#3-6-enqueueMessage "3.6 enqueueMessage")3.6 enqueueMessage
+### 3.6 enqueueMessage
 
 ```
 boolean enqueueMessage(Message msg, long when) {
@@ -504,7 +504,7 @@ static void android_os_MessageQueue_nativeWake(JNIEnv* env, jclass clazz, jlong 
 **小结**  
   **生产者线程将消息事务Message(Java)入队到消费者线程的消息队列MessageQueue(Java)中,如果符合唤醒条件则会调用Native方法nativeWake唤醒消费者线程**
 
-# [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#三、全文总结 "三、全文总结")三、全文总结
+# 三、全文总结
 
 ![Looper.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/caf834280a0c4558b6acd2aa91e1d7d7~tplv-k3u1fbpfcp-watermark.image?)
 

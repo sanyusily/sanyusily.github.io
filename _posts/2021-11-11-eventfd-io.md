@@ -14,7 +14,7 @@ tags: Linux AOSP
 
   如上图所示,在相同进程中,**乙线程无事件可处理时会进行休眠等待**.一旦来事件需要处理,**甲线程会通过eventfd通知乙线程唤醒**并处理事件.
 
-## [](https://zhenkunhuang.github.io/2019/04/20/linux-eventfd/#函数原型 "函数原型")函数原型
+## 函数原型
 
 **SYNOPSIS**
 ```
