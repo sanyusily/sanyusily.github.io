@@ -7,15 +7,15 @@ tags: Looper Android AOSP
 
 # 一、Looper(Native)
 
-## [序言](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#序言 "序言")序言
+## 序言
 
-  **学习此篇前,请确认掌握了[eventfd](https://zhenkunhuang.github.io/2019/04/20/linux-eventfd/ "eventfd")以及[epoll](https://zhenkunhuang.github.io/2019/04/23/linux-epoll/ "epoll")的使用**
+  **学习此篇前,请确认掌握了[eventfd](https://sanyusily.github.io/2021/11/11/eventfd-io.html "eventfd")以及[epoll](https://sanyusily.github.io/2021/11/12/linux-epoll-io.html "epoll")的使用**
 
-## [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#简介 "简介")简介
+## 简介
 
   在[Android P源码分析之Handler(JAVA)篇](https://zhenkunhuang.github.io/2019/05/05/android-handler-java/ "Android P源码分析之Handler(JAVA)篇")中,我们分析了Java层的消息循环处理流程,其中Looper扮演着不断从消息队列中取出消息进行分发处理的重要角色.而在Native层中,也存在着相同作用的Looper.
 
-## [](https://zhenkunhuang.github.io/2019/05/18/android-Looper-Native/#示例 "示例")示例
+## 示例
 
 **类定义**
 
