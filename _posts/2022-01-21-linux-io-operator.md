@@ -23,7 +23,7 @@ ssize_t read(int fd, void *buf, size_t count);
   On success, the number of bytes read is returned(zero indicates end of file)  
   On error, -1 is returned, and errno is set appropriately
 
-### [](https://zhenkunhuang.github.io/2019/04/20/linux-io-rw/#write "write")write
+### write
 
 **SYNOPSIS**
 ```
