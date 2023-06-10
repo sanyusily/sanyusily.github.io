@@ -3,9 +3,8 @@ layout: article
 title: 'Ubuntu20.04编译Android10系统源码'
 tags: Framework
 ---
-# aosp 13 编译Android10系统源码
 
-## 0初始 搭建环境
+# 初始 搭建环境
 
 1默认官方的源在国内下载很慢,推荐换成[中科大](http://mirrors.ustc.edu.cn/help/ubuntu.html)的源.
 2源更换完成后,下载所需的软件包:

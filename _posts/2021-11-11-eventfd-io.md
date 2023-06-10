@@ -6,7 +6,7 @@ tags: Linux AOSP
  
 
 
-## eventfd简介
+## eventfd[](https://zhenkunhuang.github.io/2019/05/11/android-RefBase-sp-wp/#简介 "简介")简介
   eventfd顾名思义它就是一个用于事件通知的fd.多用于用户态进程中多线程之间相互通知,也可用于内核事件通知
   
 ## 应用场景

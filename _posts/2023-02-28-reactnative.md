@@ -4,7 +4,7 @@ title: '实现和探究ReactNative的分包功能'
 tags: react
 ---
 
-# 介绍
+# SYNOPSIS
 
 为了实现和探究ReactNative的分包功能，以及构建一个 相对从性能上 和 技术上都比较ok 的项目架构 而存在的一个库。你可以把它理解为一个 App的技术架构 方案。
 
