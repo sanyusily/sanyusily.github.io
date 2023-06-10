@@ -1,13 +1,11 @@
 ---
 layout: article
-title: 'Android 源码 RefBase，sp,wp'
+title: 'Android 源码分析之 RefBase  & sp & wp'
 tags: Android RefBase sp wp
 ---
 
-# Android P源码分析之RefBase & sp,wp 
 
 # 一﹑RefBase类
-
 ## 简介
 
   **RefBase类引入了计数概念,当类的引用计数为0的时候会自动释放类对象.该方式代替传统手动释放类对象**

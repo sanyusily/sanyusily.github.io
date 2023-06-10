@@ -4,8 +4,6 @@ title: 'Linux 知识之socketpair'
 tags: socketpair socket linux
 ---
 
-# Linux基础知识之socketpair
-
 ## 简介
 
   socketpair会创建一对无名套接字的描述符,具有全双工通信特性(描述符可读也可写),他的域只能为AF_UNIX(本地).

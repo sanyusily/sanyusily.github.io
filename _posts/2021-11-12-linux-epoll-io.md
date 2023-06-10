@@ -5,9 +5,6 @@ tags: Linux epoll
 ---
 
 
-# Linux基础知识之IO多路复用epoll 
-
-
 ## epoll 简介
 epoll是linux为监听多路IO的状态所实现的方法.
 
