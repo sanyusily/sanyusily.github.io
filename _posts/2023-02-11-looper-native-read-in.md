@@ -9,7 +9,7 @@ tags: Looper Android AOSP
 
 ## 序言
 
-  **学习此篇前,请确认掌握了[eventfd](https://sanyusily.github.io/2021/11/11/eventfd-io.html "eventfd")以及[epoll](https://sanyusily.github.io/2021/11/12/linux-epoll-io.html "epoll")的使用**
+  **学习此篇前,请确认掌握了[eventfd](https://sanyusily.github.io/2022/11/11/eventfd-io.html "eventfd")以及[epoll](https://sanyusily.github.io/2023/02/12/linux-epoll-io.html "epoll")的使用**
 
 ## 简介
 

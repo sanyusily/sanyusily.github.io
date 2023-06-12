@@ -69,7 +69,7 @@ private Looper(boolean quitAllowed) {
 }
 ```
 
-由于此篇文章只说Java实现部分,而MessageQueue类涉及到native部分,此部分会在[Native篇](https://sanyusily.github.io/2021/12/31/looper-native-read-in.html "Native篇")中详细讲解,因此这里不具体进行分析,**这里读者只需知道创建了消息队列MessageQueue即可**
+由于此篇文章只说Java实现部分,而MessageQueue类涉及到native部分,此部分会在[Native篇](https://sanyusily.github.io/2023/02/11/looper-native-read-in.html "Native篇")中详细讲解,因此这里不具体进行分析,**这里读者只需知道创建了消息队列MessageQueue即可**
 
 ##### 总结
 
