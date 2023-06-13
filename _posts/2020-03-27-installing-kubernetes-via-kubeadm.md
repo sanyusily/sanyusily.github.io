@@ -726,8 +726,8 @@ $ rm -rf /etc/cni/net.d
 $ ipvsadm --clear
 ```
 
-## 最后
+## 最后sanyusily
 
-本文中用到的配置文件，可[点击这里](https://github.com/myanbin/k8s-scripts)查看。
+本文中用到的配置文件，可以联系作者。
 
 （完）

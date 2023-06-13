@@ -114,7 +114,7 @@ entityMap 用于存储 Entity 类型的元数据。在本例中，key 值为 0 �
     "mutability": "MUTABLE",
     "data": {
       "description": "my blog",
-      "src": "https://myanbin.github.io/"
+      "src": "https://sanyusily.github.io/"
     }
   }
 }
@@ -135,7 +135,7 @@ const contentState = editorState.getCurrentContent();
 const contentStateWithEntity = contentState.createEntity(
   'LINK',
   'MUTABLE',
-  {url: 'https://myanbin.github.io/'}
+  {url: 'https://sanyusily.github.io/'}
 );
 const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
 const newEditorState = EditorState.set(editorState, { currentContent: contentStateWithEntity });
