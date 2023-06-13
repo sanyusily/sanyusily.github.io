@@ -201,7 +201,7 @@ var __BUNDLE_START_TIME__=this.nativePerformanceNow?nativePerformanceNow():Date.
     __METRO_GLOBAL_PREFIX__='';
     process.env=process.env||{};
     process.env.NODE_ENV=process.env.NODE_ENV||"production";
-//可以看到 它定义了 运行时的基本环境变量 __BUNDLE_START_TIME__、__DEV__、__METRO_GLOBAL_PREFIX__..... 其作用是给RN 的Native 容器识别的 ，我们这里不深入，你只需要 知道没有这个 RN 的Native 容器识别会异常！ 报错闪退
+//可以看到 它定义了 运行时的基本环境变量 __BUNDLE_START_TIME__、__DEV__、__METRO_GLOBAL_PREFIX__..... 其作用是给RN 的Native 容器识别的 ，我们这里不深入，你只需要 知道没有这个 ReactNative 的Native 容器识别会异常！ 报错闪退
 
 
 // 解析来 是三个闭包立即执行 函数 ，重点是第一个 它定义了 __r ,__d, 这两个函数 就说后面 模块定义 和 模块执行的关键函数
@@ -346,7 +346,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5]));
 
-// 下面三个模块 是 react -> react-native -> jsxRuntime 的重要模块 ！分包负责 核心加载 RN 以来，JSXruntime 解析 
+// 下面三个模块 是 react -> react-native -> jsxRuntime 的重要模块 ！分包负责 核心加载 ReactNative 以来，JSXruntime 解析 
   var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6]));
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[7]);
@@ -654,7 +654,7 @@ function createModuleIdFactory() {
 
 **到此为止，我们对bundle 和 metro 的浅析接结束了，以上都是前置内容是了解后续拆包方案的 js部分的基础**
 
-1.4 js基础部分我们掰开 说完整了，我们看看 RN 在Android 上的loading 原理
+1.4 js基础部分我们掰开 说完整了，我们看看 ReactNative 在Android 上的loading 原理
 
 
 
@@ -931,7 +931,7 @@ class ReactInstanceManagerBuilder {
         Assertions.assertCondition(this.mUseDeveloperSupport || this.mJSBundleAssetUrl != null || this.mJSBundleLoader != null, "JS Bundle File or Asset URL has to be provided when dev support is disabled");
         Assertions.assertCondition(this.mJSMainModulePath != null || this.mJSBundleAssetUrl != null || this.mJSBundleLoader != null, "Either MainModulePath or JS Bundle File needs to be provided");
         
-        // RN 的UI 提供者 
+        // ReactNative 的UI 提供者 
         if (this.mUIImplementationProvider == null) {
             this.mUIImplementationProvider = new UIImplementationProvider();
         }
@@ -1461,7 +1461,7 @@ public class CatalystInstanceImpl implements CatalystInstance {
 
   - 但光这样就结束了？远远没有，如果像上述这样做的话，会导致 每个 Activity 都会全量载入 一次 bundle ，如果有一种方法，能够把基础的common 缓存起来，每次 Activity 只加载 bu 包就好了。
 
-  市面上对于这一块有不同的做法，网上能搜到的就是 腾讯某团队的 一篇文章了 （<https://cloud.tencent.com/developer/article/1005382>），但是这....是有局限的 直接缓存 RootView 要仔细处理 Native 的生命周期 和 RN 的生命周期，要不然会导致 缓存的RootView 无法执行 componnetDid 等，因为他执行过一次就不在执行js 了你没有reload js 只是缓存绘制好的View 而且 ，在 native 的 onDestroy 中也要处理，要不然缓存的view 无法相应JS。
+  市面上对于这一块有不同的做法，网上能搜到的就是 腾讯某团队的 一篇文章了 （<https://cloud.tencent.com/developer/article/1005382>），但是这....是有局限的 直接缓存 RootView 要仔细处理 Native 的生命周期 和 ReactNative 的生命周期，要不然会导致 缓存的RootView 无法执行 componnetDid 等，因为他执行过一次就不在执行js 了你没有reload js 只是缓存绘制好的View 而且 ，在 native 的 onDestroy 中也要处理，要不然缓存的view 无法相应JS。
 
   基于此我换了一种思路去实现呢它，我把common 缓存起来，动态加载不同的bundle ，目前我现在的做法基本上 是妙进的！
   
@@ -1594,7 +1594,7 @@ public class CatalystInstanceImpl implements CatalystInstance {
 
     3. common开头独立执行嘛 - ✅4
 
-    3. RN 下载 zip 并解包 - ✅
+    3. ReactNative 下载 zip 并解包 - ✅
 
     ```
 
@@ -1845,7 +1845,7 @@ end
 
 2. 重要的原理
 
-我们先看看 RN 在IOS 中的加载过程 就能明白 我目前采用的方案的原理了
+我们先看看 ReactNative 在IOS 中的加载过程 就能明白 我目前采用的方案的原理了
 
 -> 创建 RCTRootView，为 React Native 提供原生 UI 中的根视图。
 
@@ -2091,18 +2091,18 @@ changeActivity: (value) => {
 
 # 参考和感谢
 
-[RN 的Android 端执行过程](https://fsilence.github.io/2018/01/09/react-native-load-jsbundle/)
+[ReactNative的Android 端执行过程](https://fsilence.github.io/2018/01/09/react-native-load-jsbundle/)
 
 [一种RN的分包策略](https://cloud.tencent.com/developer/article/1005382)
 
 [ReactNative JNI C++ 源代码](https://github1s.com/facebook/react-native/blob/HEAD/ReactAndroid/src/main/jni/CMakeLists.txt)
 
-[RN 在IOS 中的build 方式](https://stackoverflow.com/questions/42091721/how-to-get-offline-bundling-of-ios-in-react-native)
+[ReactNative在IOS 中的build 方式](https://stackoverflow.com/questions/42091721/how-to-get-offline-bundling-of-ios-in-react-native)
 
-[RN的CI/CD到 IOS脚本分析](https://www.uglydirtylittlestrawberry.co.uk/posts/react-native-ios-build-and-inject-bundle/)
+[ReactNative的CI/CD到 IOS脚本分析](https://www.uglydirtylittlestrawberry.co.uk/posts/react-native-ios-build-and-inject-bundle/)
 
-[RN集成到IOS- 1](https://www.jianshu.com/p/0e830adc4c90)
+[ReactNative集成到IOS- 1](https://www.jianshu.com/p/0e830adc4c90)
 
-[RN集成到IOS- 2](https://www.jianshu.com/p/e09ca00d7aaa)
+[ReactNative集成到IOS- 2](https://www.jianshu.com/p/e09ca00d7aaa)
 
 [为什么IOS要禁用 字节编译](https://stackoverflow.com/questions/72543728/xcode-14-deprecates-bitcode-but-why/73219854#73219854)
