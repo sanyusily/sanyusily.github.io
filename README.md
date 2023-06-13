@@ -1,6 +1,6 @@
 # [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
-## Brief preface
+# 郑智谋技术博客 Brief preface
 
 ~~~text
 这是 技术云屋 的源码，如果您喜欢这个技术云屋主题，可以自由的使用它。请完成如下操作：
