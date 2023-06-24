@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 'Ubuntu20.04 Android P分析系统源码'
-tags: Framework AOSP Android Ubuntu20
+tags: Framework AOSP Android
 ---
 
 #  Ubuntu20.04  编译Android源码（AOSP）

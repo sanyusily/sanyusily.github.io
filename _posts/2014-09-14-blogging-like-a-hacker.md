@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "像黑客一样写博客"
-tags: code
+tags: daily
 ---
 
 
