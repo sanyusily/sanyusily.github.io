@@ -1,6 +1,6 @@
 ---
 layout: article
-title: '使用 CNPM 搭建私有 npm 仓库'
+title: '使用InputDispatcher for coder'
 tags: code
 ---
 
