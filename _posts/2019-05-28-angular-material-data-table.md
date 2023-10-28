@@ -1,11 +1,11 @@
 ---
 layout: article
-title: '基于 Angular 的 Material Design 数据表格不完全指南'
+title: '基于 Angular 的 Material Design 数据表格不完全指南1'
 tags: code
 ---
 
 
-在 Web 应用，尤其是中后台应用中，数据表格（Data Table）是处理批量数据最有效、最常用的组件。本文将介绍 Angular Material 中数据表格的基本及进阶用法。
+在 Web 应用，尤其是中后台应用中，数据表格（Data Table）是处理批量数据最有效、最常用的组件。本文将介绍 Angular Material 中数据表格的基本及进阶用法11。
 
 
 ## 一、定义表格的模板
