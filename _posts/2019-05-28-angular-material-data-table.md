@@ -1,6 +1,6 @@
 ---
 layout: article
-title: '基于 Angular 的 Material Design 数据表格不完全指南1'
+title: '基于 Angular 的 Material Design 数据表格不完全指南'
 tags: code
 ---
 
