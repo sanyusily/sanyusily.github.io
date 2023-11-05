@@ -329,14 +329,15 @@ git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
 
 mkdir quickstart-react-native
 cd quickstart-react-native
-git init 
+
+
+git init
 touch README.md
 git add README.md
 git commit -m "first commit"
 git remote add origin https://gitee.com/sanyusily/quickstart-react-native.git
 git push -u origin "master"
 git push --set-upstream origin main
-
 
 git branch --set-upstream-to=origin/master master
 因为远程仓库新建时，有LIENCE，由于本地仓库和远程仓库有不同的开始点，也就是两个仓库没有共同的commit出现，无法提交，此时我们需要allow-unrelated-histories。也就是我们的 pull 命令改为下面这样的：

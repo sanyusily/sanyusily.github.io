@@ -1,6 +1,6 @@
 ---
 layout: article
-title: '常用命令 Linux'
+title: '常用命令 Linux npm'
 tags: Linux
 ---
 
@@ -588,10 +588,17 @@ $ docker pull quay.io/omd/jekyll
 
 $ docker pull quay-mirror.qiniu.com/omd/jekyll
 
-  
-  
 
 
+2023年最新最全 VSCode 插件推荐！
+VSCode React Refactor
+Simple React Snippets
+Type React Code Snippets
+npm Intellisense  该插件为 import 语句中的 npm 模块提供了自动完成功能。npm 模块的所有导入都会使用此扩展自动处理。
+Path intellisense 该插件用于自动补全文件名。当 import 其它文件时，能够对文件进行提示，快速补全要引入的文件名。
+Better comments 该插件对不同类型的注释会附加了不同的颜色
+
+Git Graph  插件用于可视化查看存储库的 Git 操作，并从图形中轻松执行Git操作
 
 ## 使用 Jekyll 获取源代码 使用主题让博客更美观
 ~~~
@@ -599,6 +606,8 @@ $ docker pull quay-mirror.qiniu.com/omd/jekyll
 友情引用
 
 ~~~css
+https://www.sohu.com/a/644680998_121124376
+
 https://www.youtube.com/channel/UCmlhPmTdqYhRWwWZWSIBwGw/featured
 
 https://gist.github.com/biezhi
