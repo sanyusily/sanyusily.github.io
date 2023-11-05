@@ -324,3 +324,62 @@ squash a5f4a0d added cat-file
 ~~~sh
 git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
 ~~~
+
+
+
+mkdir quickstart-react-native
+cd quickstart-react-native
+git init 
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin https://gitee.com/sanyusily/quickstart-react-native.git
+git push -u origin "master"
+git push --set-upstream origin main
+
+
+git branch --set-upstream-to=origin/master master
+因为远程仓库新建时，有LIENCE，由于本地仓库和远程仓库有不同的开始点，也就是两个仓库没有共同的commit出现，无法提交，此时我们需要allow-unrelated-histories。也就是我们的 pull 命令改为下面这样的：
+git pull origin master --allow-unrelated-histories
+
+git remote -v
+git remote add 仓库地址
+git remote rm 仓库名称
+
+$ ssh-keygen -t rsa
+$ cat ~/.ssh/id_rsa.pub
+ssh-keygen -t rsa -b 4096 -C "teitibou@163.com"
+
+
+$ code . 打开vscode
+
+解决git每次提交代码都要输入帐号密码
+git config --global credential.helper store
+
+
+85C7-22A3
+
+github.com/oh-my-docker/jekyll-docker
+
+$ sudo apt  install docker.io
+
+
+
+$ sudo apt-get install ruby ruby-dev 安装Ruby包和开发工具：
+ 
+$ sudo apt-get install make build-essential 必需的构建工具
+$ sudo gem install bundler 依赖包安装
+$ sudo gem install jekyll
+bundle exec jekyll -v
+bundle exec jekyll serve
+
+卸载重新安装jekyll
+PACKAGES="$(dpkg -l |grep jekyll|cut -d" " -f3|xargs )"
+sudo apt remove --purge $PACKAGES 
+sudo apt autoremove
+sudo gem install jekyll jekyll-feed jekyll-gist jekyll-paginate jekyll-sass-converter jekyll-coffeescript
+bundle update
+
+bundle exec jekyll new myblog
+bundle exec jekyll serve
+
