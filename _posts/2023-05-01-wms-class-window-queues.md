@@ -1,7 +1,7 @@
 ---
 layout: article
-title: '使用InputDispatcher for coder'
-tags: code
+title: 'WindowManagerService WMS'
+tags: code wms
 ---
 
 A video with Header Image, See [![Watch the video](http://i0.hdslb.com/bfs/archive/db72e31115aa27779ffd0043ab76facd6ae5c2de.jpg)](https://www.bilibili.com/video/BV1Av411J7ad)  for more examp  es.
